@@ -1,37 +1,192 @@
-body {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-}
-
+@charset "UTF-8";
 header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 50%;
-  height: 8rem;
+  height: 10%;
   background-color: rgb(123, 151, 177);
+  width: 100%;
 }
-header .logo {
+header .header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+header .header-container .logo {
   padding-inline: 2rem;
 }
-header .logo img {
+header .header-container .logo img {
   height: 6rem;
 }
-header .nav-links {
+header .header-container .nav-links {
   list-style: none;
   display: flex;
   gap: 1rem;
   padding-right: 2rem;
 }
-header .nav-links a {
+header .header-container .nav-links a {
   text-decoration: none;
   color: #333;
 }
-header .nav-links ahover {
+header .header-container .nav-links a:hover {
   color: #007bff;
+}
+
+#best-movie-container {
+  margin: 2rem 0 2rem 0;
+  background-color: black;
+  width: 100%;
+  height: 15%;
+}
+#best-movie-container .movie-infos {
+  display: flex;
+  flex-direction: row;
+  padding: 0 100px 0 60px;
+  justify-content: space-between;
+  height: 100%;
+}
+#best-movie-container .movie-infos .title-and-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 100%;
+}
+#best-movie-container .movie-infos .title-and-button-container p {
+  color: white;
+  font-size: 32px;
+  margin: 0;
+}
+#best-movie-container .movie-infos .title-and-button-container button {
+  display: flex;
+  background-color: red;
+  height: 2rem;
+  width: 6rem;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 25px;
+}
+
+.Films_les_mieux_notés-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#carousel-containers {
+  width: 100%;
+  height: 50%;
+}
+#carousel-containers .type-container {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#carousel-containers .type-container h1 {
+  display: flex;
+  font-size: x-large;
+}
+#carousel-containers .type-container .carousel-container {
+  display: flex;
+  flex-direction: row;
+  height: 85%;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+#carousel-containers .type-container .carousel-container .fa-left-long {
+  display: flex;
+  justify-content: baseline;
+  font-size: xxx-large;
+  width: 10%;
+}
+#carousel-containers .type-container .carousel-container .fa-left-long:hover {
+  cursor: pointer;
+}
+#carousel-containers .type-container .carousel-container .fa-right-long {
+  display: flex;
+  justify-content: end;
+  font-size: xxx-large;
+  width: 10%;
+}
+#carousel-containers .type-container .carousel-container .fa-right-long:hover {
+  cursor: pointer;
+}
+#carousel-containers .type-container .carousel-container .carousel-data {
+  display: flex;
+  justify-content: center;
+  height: 85%;
+  width: 80%;
+  justify-content: space-between;
+}
+#carousel-containers .type-container .carousel-container .carousel-data img {
+  max-width: 25%;
+}
+#carousel-containers .type-container .carousel-container .carousel-data img:hover {
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal i {
+  display: flex;
+  justify-content: end;
+  color: red;
+}
+.modal i:hover {
+  cursor: pointer;
+}
+.modal h1 {
+  text-align: center;
+}
+.modal .modal-container {
+  width: 40%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+.modal .modal-container .modal-content {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.modal .modal-container .modal-content .img-container {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+}
+.modal .modal-container .modal-content .img-container img {
+  height: 25rem;
+}
+.modal .modal-container .modal-content .movie-infos {
+  width: 50%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,19 +1,59 @@
-const url = "http://localhost:8000/api/v1/titles/";
-async function getBestMovie() {
-    const sortByImdbScore = "?sort_by=-imdb_score"
+import * as api from "./api.js";
+import * as display from "./ui/home.js";
 
+async function loadBestMovie() {
     try {
-        const response = await fetch(url + sortByImdbScore);
-        const titlesData = await response.json();
-        console.log(titlesData)
-        if (titlesData) {
-            const dataContainer = document.getElementById('data-container');
-            const firstTitle = titlesData.results[0].title;
-            dataContainer.innerHTML = `<p>${firstTitle}</p>`;
-        }
+        const data = await api.getBestMovie();
+        display.bestMovie(data);
     } catch (error) {
-        return null;
+        console.error("Une erreur est survenue lors de la récupération du meilleur film:", error);
     }
 }
 
-getBestMovie();
+
+async function loadCarousels() {
+    try {
+        const BestMoviesdata = await api.getBestRankedMovies();
+        if (BestMoviesdata) {
+            console.log(BestMoviesdata)
+            display.carousel(BestMoviesdata, "Films les mieux notés");
+        }
+
+        const data = await api.getRandomTypes();
+        if (data) {
+            let type = 0;
+            for (let i = 0; i < data.length; i++) {
+                if (type === 3) {
+                    break;
+                } else {
+                    const dataByType = await getMoviesByType(data[i].name);
+                    console.log(dataByType)
+                    if (dataByType !== null) {
+                        type += 1;
+                        console.log(type);
+                        display.carousel(dataByType, data[i].name);
+                    }
+                }
+            }
+        }
+    } catch (error) {
+        console.error("Une erreur est survenue lors de la récupération des meilleurs films :", error);
+    }
+}
+
+
+async function getMoviesByType(type) {
+    try {
+        const movies = await api.getMovies(type);
+        if(movies.count >= 7){
+            return movies
+        } else 
+        return null
+    } catch (error) {
+        console.error("Une erreur est survenue lors de la récupération des films par type:", error);
+    }
+}
+
+
+loadBestMovie();
+loadCarousels();
