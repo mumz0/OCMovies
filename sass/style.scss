@@ -1,7 +1,20 @@
-body {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
+@import './header.scss';
+@import './best_movie.scss';
+@import './carousel.scss';
+@import './modal.scss';
+
+html, body {
     margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    
 }
-@import './header.scss'
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
