@@ -17,7 +17,8 @@ Executer les commandes suivantes:
 
 `npm install` pour installer les dépendances
 
-`npm start` pour éxecuter le script présent dans le fichier package.json.
+`npm start` pour éxecuter le script présent dans le fichier package.json. Celui-ci lancera le serveur en éxécutant la commande 
+`http-server -a localhost` qui utilise la dépendance http-server et qui spécifie que le serveur doit écouter sur l'adresse localhost.
 
 Apres ces étapes vous devriez être capable de visionner le site avec le lien suivant:
 
