@@ -17,9 +17,9 @@ Node.js et npm doivent avoir été précédemment installés.
 
 Exécutez les commandes suivantes :
 
-npm install pour installer les dépendances.
+`npm install` pour installer les dépendances.
 
-npm start pour exécuter le script spécifié dans le fichier package.json. Celui-ci lancera le serveur en exécutant la commande http-server -a localhost qui utilise la dépendance http-server et qui spécifie que le serveur doit écouter sur l'adresse localhost.
+`npm start` pour exécuter le script spécifié dans le fichier package.json. Celui-ci lancera le serveur en exécutant la commande `http-server -a localhost` qui utilise la dépendance http-server et qui spécifie que le serveur doit écouter sur l'adresse localhost.
 
 Après ces étapes, vous devriez être en mesure de visualiser le site avec le lien suivant :
 
