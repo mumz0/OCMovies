@@ -1,4 +1,3 @@
-@charset "UTF-8";
 header {
   display: flex;
   height: 10%;
@@ -69,11 +68,6 @@ header .header-container .nav-links a:hover {
   border-radius: 25px;
 }
 
-.Films_les_mieux_notés-container {
-  display: flex;
-  flex-direction: row;
-}
-
 #carousel-containers {
   width: 100%;
   height: 50%;
@@ -87,6 +81,7 @@ header .header-container .nav-links a:hover {
 #carousel-containers .type-container h1 {
   display: flex;
   font-size: x-large;
+  user-select: none;
 }
 #carousel-containers .type-container .carousel-container {
   display: flex;
@@ -100,7 +95,7 @@ header .header-container .nav-links a:hover {
   display: flex;
   justify-content: baseline;
   font-size: xxx-large;
-  width: 10%;
+  width: 5%;
 }
 #carousel-containers .type-container .carousel-container .fa-left-long:hover {
   cursor: pointer;
@@ -109,7 +104,7 @@ header .header-container .nav-links a:hover {
   display: flex;
   justify-content: end;
   font-size: xxx-large;
-  width: 10%;
+  width: 5%;
 }
 #carousel-containers .type-container .carousel-container .fa-right-long:hover {
   cursor: pointer;
@@ -119,10 +114,12 @@ header .header-container .nav-links a:hover {
   justify-content: center;
   height: 85%;
   width: 80%;
-  justify-content: space-between;
+  gap: 1rem;
+  user-select: none;
 }
 #carousel-containers .type-container .carousel-container .carousel-data img {
-  max-width: 25%;
+  width: 200px;
+  height: auto;
 }
 #carousel-containers .type-container .carousel-container .carousel-data img:hover {
   cursor: pointer;
@@ -173,7 +170,8 @@ header .header-container .nav-links a:hover {
   width: 50%;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   display: flex;
