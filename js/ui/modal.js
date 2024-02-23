@@ -1,5 +1,4 @@
 export function displayModal(movieObj, elemClassName) {
-    console.log(movieObj);
 
     // Récupérer l'élément modal container
     const modal = document.getElementById('myModal');
