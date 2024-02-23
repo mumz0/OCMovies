@@ -15,7 +15,6 @@ async function loadCarousels() {
     try {
         const BestMoviesdata = await api.getBestRankedMovies();
         if (BestMoviesdata) {
-            console.log(BestMoviesdata)
             display.carousel(BestMoviesdata, "Films les mieux notés");
         }
 
@@ -27,10 +26,8 @@ async function loadCarousels() {
                     break;
                 } else {
                     const dataByType = await getMoviesByType(data[i].name);
-                    console.log(dataByType)
                     if (dataByType !== null) {
                         type += 1;
-                        console.log(type);
                         display.carousel(dataByType, data[i].name);
                     }
                 }

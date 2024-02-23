@@ -93,8 +93,7 @@ header .header-container .nav-links a:hover {
 }
 #carousel-containers .type-container .carousel-container .fa-left-long {
   display: flex;
-  justify-content: baseline;
-  font-size: xxx-large;
+  font-size: 48px;
   width: 5%;
 }
 #carousel-containers .type-container .carousel-container .fa-left-long:hover {
@@ -103,7 +102,7 @@ header .header-container .nav-links a:hover {
 #carousel-containers .type-container .carousel-container .fa-right-long {
   display: flex;
   justify-content: end;
-  font-size: xxx-large;
+  font-size: 48px;
   width: 5%;
 }
 #carousel-containers .type-container .carousel-container .fa-right-long:hover {

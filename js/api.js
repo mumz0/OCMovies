@@ -31,7 +31,6 @@ export async function getBestRankedMovies() {
     try {
         const response = await fetch(title_url + "?" + sortByImdbScore + "&page_size=7");
         const data = await response.json();
-        console.log(data)
         return data;
     } catch (error) {
         return null;
